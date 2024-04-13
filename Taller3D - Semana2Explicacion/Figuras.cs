@@ -21,7 +21,8 @@ namespace Taller3D___Semana2Explicacion
 
                 string Option = Console.ReadLine();
 
-                switch(Option) 
+                Area area = null; //obligatorio
+                switch (Option) 
                 {
                     case "Circulo":
 
@@ -30,8 +31,8 @@ namespace Taller3D___Semana2Explicacion
                         Console.WriteLine("Ingresa el radio del circulo\n");
                         cRadio = float.Parse(Console.ReadLine());
 
-                        Circulo circulo = new Circulo(cRadio);
-                        Console.WriteLine($"El area del circulo es {circulo.CalcularArea()}");
+                        area = new Circulo(cRadio);
+                        Console.WriteLine($"El area del circulo es {area.CalcularArea()}");
                         
                         break;
 
@@ -45,8 +46,8 @@ namespace Taller3D___Semana2Explicacion
                         Console.WriteLine("Ingresar la altura del rectangulo\n");
                         a = float.Parse(Console.ReadLine());
 
-                        Rectangulo rectangulo = new Rectangulo(b, a);
-                        Console.WriteLine($"El area del rectangulo es {rectangulo.CalcularArea()}");
+                        area = new Rectangulo(b, a);
+                        Console.WriteLine($"El area del rectangulo es {area.CalcularArea()}");
 
                         break;
 
@@ -59,13 +60,10 @@ namespace Taller3D___Semana2Explicacion
 
                         Console.WriteLine("Ingresar la altura del triangulo\n");
                         w = float.Parse(Console.ReadLine());
-
-                        Triangulo triangulo = new Triangulo(q, w);
-                        Console.WriteLine($"El area del triangulo es {triangulo.CalcularArea()}");
+                        area = new Triangulo(q, w);
+                        Console.WriteLine($"El area del triangulo es {area.CalcularArea()}");
 
                         break;
-
-
                 }
 
                 Console.WriteLine("Deseas continuar, SI/NO");
@@ -75,8 +73,13 @@ namespace Taller3D___Semana2Explicacion
                 }
             }
 
-            Console.WriteLine();
-        }        
+            
+        }  
+        
+        public virtual float CalcularArea()
+        {
+            return 0;
+        }
   
     }
 }
