@@ -71,15 +71,7 @@ namespace Taller3D___Semana2Explicacion
                 {
                     continueFlag = false;
                 }
-            }
-
-            
-        }  
-        
-        public virtual float CalcularArea()
-        {
-            return 0;
-        }
-  
+            }            
+        }        
     }
 }
